@@ -233,7 +233,7 @@ class actionable {
 		$_filter .= '		<ul>';
 		// loop filter options
  		foreach (self::$media_values as $k => $val) {
-			$_filter .= '			<li><a id="media_102" href="#"><span>' . Kohana::lang("actionable.$val") . '</span></a></li>';
+			$_filter .= '			<li><a id="media_' . $k . '" href="#"><span>' . Kohana::lang("actionable.$val") . '</span></a></li>';
  		}
 		$_filter .= '		</ul>';
 		$_filter .= '	</div>';
