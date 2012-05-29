@@ -1,13 +1,13 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 	$lang = array(
-		'actionable' => 'Actionable',
-		'not_actionable' => 'Not actionable',
-		'urgent' => 'Urgent',
-		'action_taken' => 'Action taken',
-		'action_status_description' => 'Does this report need action?',
-		'action_summary_description' => 'Has action been taken? Summarise action taken or required on this report',
-		'summary' => 'Summary',
-		'action_needed' => 'Action needed',
-		'action_urgent' => 'Urgent action needed'
+		'actionable' => '预备行动',
+		'not_actionable' => '无需行动',
+		'urgent' => '情况紧急',
+		'action_taken' => '已采取行动',
+		'action_status_description' => '这个报告要采取行动吗？',
+		'action_summary_description' => '已经采取行动？在这个报告摘要输入行动总结或跟进需求',
+		'summary' => '摘要',
+		'action_needed' => '需要行动',
+		'action_urgent' => '需要紧急行动'
 	);
 ?>
