@@ -15,12 +15,12 @@
 class actionable {
 	
 	private $media_filter;
-	
+
 	private static $media_values = array(
-		101 => 'All',
-		102 => 'Actionable',
-		103 => 'Urgent',
-		104 => 'Action taken'
+		102 => 'actionable',
+		103 => 'urgent',
+		104 => 'action_taken',
+		101 => 'all'
 	);
 	
 	/**
@@ -229,12 +229,12 @@ class actionable {
 		// Update to develop
 		$_filter = '<div class="filters clearingfix">';
 		$_filter .= '	<div style="float:left; width: 100%">';
-		$_filter .= '		<strong>' . Kohana::lang('actionable.actionable_head') . '</strong>';
+		$_filter .= '		<strong>' . Kohana::lang('actionable.actionable') . '</strong>';
 		$_filter .= '		<ul>';
-		$_filter .= '			<li><a id="media_102" href="#"><span>' . Kohana::lang('actionable.actionable') . '</span></a></li>';
-		$_filter .= '			<li><a id="media_103" href="#"><span>' . Kohana::lang('actionable.urgent') . '</span></a></li>';
-		$_filter .= '			<li><a id="media_104" href="#"><span>' . Kohana::lang('actionable.action_taken') . '</span></a></li>';
-		$_filter .= '			<li><a id="media_101" href="#"><span>' . Kohana::lang('ui_main.all') . '</span></a></li>';
+		// loop filter options
+ 		foreach (self::$media_values as $k => $val) {
+			$_filter .= '			<li><a id="media_102" href="#"><span>' . Kohana::lang("actionable.$val") . '</span></a></li>';
+ 		}
 		$_filter .= '		</ul>';
 		$_filter .= '	</div>';
 		// Add main_filters action

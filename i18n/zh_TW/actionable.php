@@ -1,6 +1,7 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 	$lang = array(
 		'actionable' => '準備行動',
+		'all' => '全部',
 		'not_actionable' => '不需行動',
 		'urgent' => '緊急狀態',
 		'action_taken' => '已採取行動',
