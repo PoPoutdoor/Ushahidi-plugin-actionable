@@ -226,11 +226,22 @@ class actionable {
 	 */
 	public function _map_main_filters()
 	{
-		echo '</div><h3>'.Kohana::lang('actionable.actionable').'</h3><ul>';
-		foreach (self::$media_values as $k => $val) {
-			echo "<li><a id=\"media_$k\" href=\"#\"><span>$val</span></a></li>";
-		}
-		echo '</ul><div>';
+		// Update to develop
+		$_filter = '<div class="filters clearingfix">';
+		$_filter .= '	<div style="float:left; width: 100%">';
+		$_filter .= '		<strong>' . Kohana::lang('actionable.actionable_head') . '</strong>';
+		$_filter .= '		<ul>';
+		$_filter .= '			<li><a id="media_102" href="#"><span>' . Kohana::lang('actionable.actionable') . '</span></a></li>';
+		$_filter .= '			<li><a id="media_103" href="#"><span>' . Kohana::lang('actionable.urgent') . '</span></a></li>';
+		$_filter .= '			<li><a id="media_104" href="#"><span>' . Kohana::lang('actionable.action_taken') . '</span></a></li>';
+		$_filter .= '			<li><a id="media_101" href="#"><span>' . Kohana::lang('ui_main.all') . '</span></a></li>';
+		$_filter .= '		</ul>';
+		$_filter .= '	</div>';
+		// Add main_filters action
+		$_filter .= "	<?php Event::run('ushahidi_action.map_main_filters');?>";
+		$_filter .= '		</div>';
+
+		echo $_filter;
 	}
 
 	/*
